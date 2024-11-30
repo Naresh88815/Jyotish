@@ -1,0 +1,104 @@
+footer {
+    background-color: #9b9b9b;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  
+  .footer-left ul,
+  .footer-center p,
+  .footer-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-left li,
+  .footer-right li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-left a,
+  .footer-center a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-center p {
+    margin-bottom: 10px;
+  }
+  
+  .footer-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-right p{
+    margin-left: 20px;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+}
+
+.social-links ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li {
+    margin: 0 10px; /* Adjust spacing as needed */
+}
+
+.social-link img {
+    display: block;
+    transition: transform 0.3s ease; /* Add a transition for hover effect */
+}
+
+.social-link img:hover {
+    transform: scale(1.1); /* Scale up the icon slightly on hover */
+}
+
+  .contacts {
+            display: flex;
+            align-items: center;
+        }
+        .contacts ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .contacts ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* Adjust spacing between items */
+        }
+        .contacts ul li img {
+            margin-right: 10px; /* Adjust spacing between icon and text */
+        }
+
+  .copyright {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #e0e0e0;
+  }
+  
+  .copyright p {
+    margin: 0;
+    color: #333;
+  }
+  

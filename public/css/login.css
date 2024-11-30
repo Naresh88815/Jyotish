@@ -1,0 +1,87 @@
+.login-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card img {
+    width: 185px;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-body h4 {
+    margin: 10px 0 20px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    width: calc(100% - 20px);
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #2980b9;
+}
+
+.forgot-password {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.right-section {
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    color: #fff;
+    padding: 30px;
+}
+
+.right-section h4 {
+    margin-bottom: 20px;
+}
+
+.right-section p {
+    font-size: 14px;
+}

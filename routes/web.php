@@ -9,34 +9,42 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
 */
+
+// Protected Routes (Only Authenticated Users Can Access)
 Route::middleware('auth')->group(function () {
-  
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+    // Logout Route
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
+// Public Routes
 Route::get('/', function () {
-    return view('/layouts/home');
+    return view('layouts.home'); // Corrected view reference
 });
-
-Route::get('/layouts/home', function () {
-    return view('home');
-});
-
-// Route to show registration form
-Route::get('/register', [RegistrationController::class, 'showRegistrationForm'])->name('register');
-
-// Show login form
-Route::get('/login', [LoginController::class, 'showLoginForm'])->name('showloginform');
-
-// Handle login form submission
-Route::post('/login', [LoginController::class, 'login.post']);
-// Logout
-Route::post('/logout', [LoginController::class, 'logout']);
 
 // Show Home Page
-Route::get('/home',[HomeController::class,'showHomePage']) ->name('showHomePage');
+Route::get('/home', [HomeController::class, 'showHomePage'])->name('showHomePage');
+
+// Registration Routes
+Route::get('/register', [RegistrationController::class, 'showRegistrationForm'])->name('register.form');
+Route::post('/register', [RegistrationController::class, 'register'])->name('register.submit');
+
+// Login Routes
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login.form');
+Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
+
+use App\Http\Controllers\ProfileController;
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
+    Route::get('/profile/create', [ProfileController::class, 'create'])->name('profile.create');
+    Route::post('/profile', [ProfileController::class, 'store'])->name('profile.store');
+    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+

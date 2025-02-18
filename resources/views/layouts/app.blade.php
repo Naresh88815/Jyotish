@@ -21,15 +21,11 @@
 </head>
 
 <body>
-    @include('layouts.header')
-
     <main class="main">
         <div class="container">
             @yield('content')
         </div>
     </main>
-
-    @include('layouts.footer')
     <script>
         document.getElementById('menu-btn').addEventListener('click', function() {
             var mobileMenu = document.getElementById('mobile-menu');
